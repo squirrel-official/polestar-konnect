@@ -1,0 +1,55 @@
+plugins {
+    id "org.springframework.boot" version "3.2.5"
+    id "io.spring.dependency-management" version "1.1.4"
+    id 'java'
+    id 'application'
+}
+
+
+group 'com.polestar.connect'
+version '1.0.0'
+
+application {
+    mainClassName = 'com.polestar.konnect.Application'
+}
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(17))
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework:spring-web:6.0.4'
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.jsoup:jsoup:1.15.3'
+    implementation 'commons-io:commons-io:2.11.0'
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+    implementation 'joda-time:joda-time:2.12.2'
+    implementation 'com.itextpdf:itextpdf:5.5.13.3'
+    implementation 'org.xhtmlrenderer:flying-saucer-pdf:9.1.22'
+
+    implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
+    implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'dev.failsafe:failsafe:3.3.0'
+
+    implementation 'org.aspectj:aspectjrt:1.9.19'
+    implementation 'org.aspectj:aspectjweaver:1.9.19'
+    implementation group: 'org.slf4j', name: 'slf4j-api', version: '2.0.13'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.23.1'
+    implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.23.1'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
