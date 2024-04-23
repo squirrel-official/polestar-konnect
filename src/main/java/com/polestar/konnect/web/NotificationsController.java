@@ -33,7 +33,7 @@ public class NotificationsController {
     }
 
     @GetMapping("/health")
-    public String health(@RequestParam("duration") int duration, @RequestParam("visitor-notification-duration") int visitorDuration) {
+    public String health() {
         return "polestar-connect is up";
     }
 
