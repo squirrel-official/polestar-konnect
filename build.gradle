@@ -23,6 +23,7 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     implementation 'org.springframework.boot:spring-boot-starter-mail'
     implementation 'org.springframework:spring-web:6.1.6'
     implementation 'org.springframework.boot:spring-boot-starter-aop'
