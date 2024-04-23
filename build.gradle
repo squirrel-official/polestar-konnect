@@ -23,19 +23,20 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework:spring-web:6.0.4'
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+    implementation 'org.springframework:spring-web:6.1.6'
     implementation 'org.springframework.boot:spring-boot-starter-aop'
     implementation 'org.jsoup:jsoup:1.15.3'
-    implementation 'commons-io:commons-io:2.11.0'
-    implementation 'org.springframework.boot:spring-boot-starter-mail'
-    implementation 'joda-time:joda-time:2.12.2'
+    implementation 'commons-io:commons-io:2.16.1'
+
+    implementation 'joda-time:joda-time:2.12.7'
     implementation 'com.itextpdf:itextpdf:5.5.13.3'
     implementation 'org.xhtmlrenderer:flying-saucer-pdf:9.1.22'
 
     implementation 'org.apache.logging.log4j:log4j-api:2.19.0'
     implementation 'org.apache.logging.log4j:log4j-core:2.19.0'
-    implementation 'com.google.guava:guava:31.1-jre'
-    implementation 'dev.failsafe:failsafe:3.3.0'
+    implementation 'com.google.guava:guava:33.1.0-jre'
+    implementation 'dev.failsafe:failsafe:3.3.2'
 
     implementation 'org.aspectj:aspectjrt:1.9.19'
     implementation 'org.aspectj:aspectjweaver:1.9.19'
@@ -44,7 +45,6 @@ dependencies {
     implementation group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.23.1'
 
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
-
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
