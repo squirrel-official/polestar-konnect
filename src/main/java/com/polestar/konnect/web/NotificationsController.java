@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.joda.time.DateTime;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,6 +30,11 @@ public class NotificationsController {
         this.notificationService = notificationService;
         this.suspendedNotificationsEndTime = DateTime.now();
         this.visitorNotificationsEndTime = DateTime.now();
+    }
+
+    @GetMapping("/health")
+    public String health(@RequestParam("duration") int duration, @RequestParam("visitor-notification-duration") int visitorDuration) {
+        return "polestar-connect is up";
     }
 
     @PostMapping("/pause")
